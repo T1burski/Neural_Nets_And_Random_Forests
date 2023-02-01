@@ -20,7 +20,7 @@ sex	age	hypertension	heart_disease	ever_married	work_type	Residence_type	avg_glu
 
 _____________________________________________________________________
 
-## Machine abd Deep Learning: the objective of this project
+## Machine and Deep Learning: the objective of this project
 
 The main goal of this project is to compare the results of predicting the ocurrence or not os the health conditions diabetes, stroke and hypertension using **Artificial Neural Networks** and **Random Forests**.
 
@@ -41,12 +41,25 @@ The Neural Networks used were Multi-layer feedforward networks with one output n
 ![image](https://user-images.githubusercontent.com/100734219/215916252-65e8e678-7593-4e33-93e7-10f2ffdbbdad.png)
 
 
-The experiments with the Neural Networks were developed using, in each medical condition dataframe, three cases: without data regularization and with data regularization using L1 technique with λ = 0,01 and λ = 0,1 (technique used to prevent occasional overfittinng of the model.
+The experiments with the Neural Networks were developed using, in each medical condition dataframe, three cases: without data regularization and with data regularization using L2 technique with λ = 0,01 and λ = 0,1 (technique used to prevent occasional overfittinng of the model.
 
 Now, the Random Forest structures were first tested without setting previously any parameters of the forest and by setting the optimized parameters obtained when using RandomSearchCV.
 
+_____________________________________________________________________
 
+## Details of the Development
 
+Before starting, a few hyperparameters were manually set for the entirety of the development process, in order to make comparisons possible afterwards, such as: 
+
+- Data training/testing sets split with the proportion 70% training  /  30% testing;
+- (NN) ReLU activation function for the hidden layers;
+- (NN) Sigmoid activation function for the output layer (since we have a classification problem (0 or 1);
+- (NN) Binary_crossentropy loss function;
+- (NN) adam optimizer;
+- (NN) Accuracy score as a metric;
+- (NN) Number of epochs = 150 and batches = 32 (values appropriate for the size os the datasets and that have a reasonable time of training);
+- (NN) validation split of 0,15, without shuffling;
+- Random state set to 42 during the tests. 
 
 
 
